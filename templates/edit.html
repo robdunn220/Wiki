@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h1>Add Entry</h1>
+<form action="/{{page_name}}/save" method="POST">
+  <input type="hidden" name="name" value="{{page_name}}">
+  <p>
+    <label>Content</label><br>
+    <input type="text" name="page_content" value="{{content}}">
+    <input type="text" name="Author" value="{{author}}">
+  </p>
+  <button type="submit">Add Page</button>
+</form>
+{% endblock %}
